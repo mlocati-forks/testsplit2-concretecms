@@ -11,15 +11,15 @@ permissions: {}
 
 env:
   # The repository that extracts the concrete directory (it has the same owner as this repository)
-  SPLITTER_REPOSITORY_NAME: concretecms-core
+  SPLITTER_REPOSITORY_NAME: testsplit2-concretecms-core
   # The Client ID of the GitHub App that's allowed to start the workflows of the splitter
   # (its private key must be saved in the SPLITTER_APP_PRIVATE_KEY secret)
-  SPLITTER_APP_CLIENT_ID: Iv23xxxxxxxxxxxxxxxx
+  SPLITTER_APP_CLIENT_ID: Iv23livKvQsER25fSc1N
 
 jobs:
   notify:
     name: Notify splitter
-    if: github.repository == 'concretecms/concretecms'
+    if: github.repository == 'mlocati-forks/testsplit2-concretecms'
     runs-on: ubuntu-latest
     steps:
       - name: Check if the split is required
